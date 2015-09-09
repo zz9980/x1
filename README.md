@@ -19,4 +19,3 @@ ACTION:  The creature should move as follows:
 MOUSE CLICK:
 * When the mouse is clicked, change x and y to the coordiantes of the mouse, and set dx and dy to random values.
 
-
