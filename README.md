@@ -1,4 +1,4 @@
-# x1:  Lights, action, camera!
+# x1:  Lights, Action, Camera!
 Create a scene plus some action for your creature.
 
 Design your own "creature" (and give it a better name than "Zoog").
