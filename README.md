@@ -14,7 +14,7 @@ ACTION:  The creature should move as follows:
 * Move in each frame by adding "dx" and "dy" to the coordinates (x,y).
 
 MOUSE CLICK:
-* When mouse is clicked, change x and y to the coordinates of the mouse (mouseX,mouseY) , and 
+* When mouse is clicked, change x and y to the mouse coordinates (mouseX,mouseY), and 
 * Set dx and dy to random values.
 
 MODIFY the "starter" code in the "x1.java" file to redraw your scene in each frame, make your creature move as described, and show it at the new coordinates (x,y).
