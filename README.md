@@ -7,8 +7,9 @@ Also design a "scene" with sky, sun, grass, and a few other features such as a t
 Modify the "starter" code in the "x1.java" file to redraw your scene in each frame,
 make your creature move as described below, and show it at the new coordinates (x,y).
 
-CREATURE:  Use at least three different shapes and colors for your creature.
-Also display its name in a contrasting color.
+CREATURE:  
+* Use at least three different shapes and colors for your creature.
+* Also display its name in a contrasting color.
 
 ACTION:  The creature should move as follows:
 * Use the variables x and y for the location of your creature.
