@@ -27,8 +27,9 @@ void draw() {
   rect( 0,horizon, width,height*3/4 );      // grass.
   
   /* INSERT YOUR CODE HERE! */
-                                            // tree
+  triangle( 150,horizon, 120,horizon-50, 180,horizon-50  );  // tree
                                             // house
+
   fill(0);
   text( "My name is Mud", 10,height-20 );                                          
                                             
@@ -47,11 +48,17 @@ void draw() {
 
 //////// HANDLERS:  mouse clicks, keys
 void mousePressed() {
-  x=  mouseX;
+  x=  mouseX;                             // Set (x,y) to mouse
   y=  mouseY;
   //
-  dx=  random( -6, +6 );
+  dx=  random( -6, +6 );                  // random speed.
   dy=  random( -4, +4 );
+}
+
+void keyPressed() {
+  if (key == 'q') {
+    exit();                           // press 'q' key to QUIT.
+  }
 }
 
 
