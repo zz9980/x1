@@ -28,7 +28,9 @@ void draw() {
   
   /* INSERT YOUR CODE HERE! */
                                             // tree
-                                            // house                                            
+                                            // house
+  fill(0);
+  text( "My name is Mud", 10,height-20 );                                          
                                             
   //// ACTION:  move (x,y) coordinates.
   x=  x + dx;
