@@ -28,6 +28,7 @@ void draw() {
   
   /* INSERT YOUR CODE HERE! */
   triangle( 150,horizon, 120,horizon-50, 180,horizon-50  );  // tree
+  text( "This is NOT a good tree; please fix it!", 150,horizon )
                                             // house
 
   fill(0);
