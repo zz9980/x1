@@ -5,6 +5,7 @@
 float x, y;       // Position of creature.
 float dx, dy;     // Speed.
 float horizon;
+int speed=1;
 
 //// SETUP:  window size, initialization (start in middle of screen).
 void setup() {
@@ -18,7 +19,18 @@ void setup() {
 
 //// NEXT FRAME:  scene, action, show.
 void draw() {
+  background();
+  tree();
+  apples();
+  house();
+  text();
+  move();
+  bird();
+}
+  
+  
   //// SCENE:  sky, sun, tree, house, etc.
+  void background(){
   background( 41,172,240);                  // sky
   fill( 255,255,0 );
   stroke(255,255,0);
@@ -26,16 +38,19 @@ void draw() {
   fill( 50,247,127 );
   stroke(50,247,127);                       // Grass
   rect( 0,horizon, width,height*3/4 );      // Grass.
+  }
+ 
   
-  /* INSERT YOUR CODE HERE! */
+  void tree(){
   fill(188, 110, 82);
   stroke(188,110,82);
   rect( 150, 200, 50, 150);     //tree
   stroke(50,247,127);
   fill(50,247,127);
   ellipse( 175,150, 160,160);
+  }
   
-  //apples
+  void apples(){
   fill(255,0,0);
   ellipse( 175,100, 30,30);
   ellipse( 150,130, 20,20);
@@ -44,8 +59,11 @@ void draw() {
   ellipse( 200,130, 30,30);
   ellipse( 150,200, 20,20);
   ellipse( 140,170, 25,25);
-
- // house
+  }
+ 
+ 
+ 
+ void house(){
  stroke(162,167,165);
  fill(162,167,165);
  rect(350,150, 200,150);    
@@ -71,18 +89,24 @@ void draw() {
  fill(255,255,0);
  stroke(255,255,0);
  ellipse(390,260, 15,15);
-
- fill(255);
- text( "Teng Lin", 10,height-20 );                                          
+ }
+ 
+ 
+ void text(){
+ fill(0);
+ text( "Teng Lin", 10,height-20 ); 
+ 
+ }
+                                           
                                             
   //// ACTION:  move (x,y) coordinates.
-  x=  x + .25*dx;
-  y=  y + .25*dy;
-  
+  void move(){
+  x=  x + .50*dx;
+  y=  y + .50*dy;
+  }
   //// SHOW:  display the creature at (x,y)
 
-  /* INSERT YOUR CODE HERE! */
-  //bird
+  void bird(){
   fill(0,0,255);
   stroke(0,0,255);
   ellipse( x,y, 80,40 );
@@ -93,6 +117,9 @@ void draw() {
   ellipse(x+20, y-5, 5,5);
 
 }
+
+
+
 
 
 //////// HANDLERS:  mouse clicks, keys
