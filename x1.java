@@ -7,8 +7,8 @@ int speed=1, radx=80, rady=40;
 void setup() {
   size( 600,500);
   horizon=  height/2;
-  x=  width/2;
-  y=  height/2;
+  x=  100;
+  y=  100;
   dx=  1.5;
   dy=  1.75;
 }
@@ -103,7 +103,7 @@ void draw() {
   if (x > width-radx || x < radx) {
     dx *=-1;
   }
-  if (y > height-rady || y < rady) {
+  if (y > horizon-20 || y < rady) {
     dy *=-1;
   }
   
@@ -129,11 +129,11 @@ void draw() {
 
 //////// HANDLERS:  mouse clicks, keys
 void mousePressed() {
-  x=  mouseX;                             // Set (x,y) to mouse
-  y=  mouseY;
+  //x=  mouseX;                             // Set (x,y) to mouse
+  //y=  mouseY;
   //
-  dx=  random( -2, +6 );                  // random speed.
-  dy=  random( -4, +2 );
+  dx=  random( -2, +3 );                  // random speed.
+  dy=  random( -2, +3 );
 }
 
 void keyPressed() {
