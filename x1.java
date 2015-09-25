@@ -1,11 +1,7 @@
-//////// Lights, Action, Camera!
-//////// Teng Lin  (CST 112; 2015/09/18)
-
-//// GLOBALS:  coordinates, speed, etc.
 float x, y;       // Position of creature.
 float dx, dy;     // Speed.
 float horizon;
-int speed=1;
+int speed=1, radx=80, rady=40;
 
 //// SETUP:  window size, initialization (start in middle of screen).
 void setup() {
@@ -101,15 +97,24 @@ void draw() {
                                             
   //// ACTION:  move (x,y) coordinates.
   void move(){
-  x=  x + .50*dx;
-  y=  y + .50*dy;
+  x=  x + 1*dx;
+  y=  y + 1*dy;
+  
+  if (x > width-radx || x < radx) {
+    dx *=-1;
+  }
+  if (y > height-rady || y < rady) {
+    dy *=-1;
+  }
+  
+  
   }
   //// SHOW:  display the creature at (x,y)
 
   void bird(){
   fill(0,0,255);
   stroke(0,0,255);
-  ellipse( x,y, 80,40 );
+  ellipse( x,y, radx,rady );
   triangle( x,y-10, x, y+10, x+60, y+5);
   triangle(x+10,y+10, x-50,y-20, x-50, y+20);
   fill(0);
@@ -136,4 +141,3 @@ void keyPressed() {
     exit();                           // press 'q' key to QUIT.
   }
 }
-   
