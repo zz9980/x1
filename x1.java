@@ -1,7 +1,9 @@
 float x, y;       // Position of creature.
-float dx, dy;     // Speed.
+float dx, dy, dxc;     // Speed.
 float horizon;
 int speed=1, radx=80, rady=40;
+float cloud1x=360, cloud1y=70; 
+float cloud2x=340, cloud2y=50;
 
 //// SETUP:  window size, initialization (start in middle of screen).
 void setup() {
@@ -11,6 +13,8 @@ void setup() {
   y=  100;
   dx=  1.5;
   dy=  1.75;
+  dxc= 1.2;
+
 }
 
 //// NEXT FRAME:  scene, action, show.
@@ -22,6 +26,7 @@ void draw() {
   text();
   move();
   bird();
+  cloudmove();
 }
   
   
@@ -67,8 +72,8 @@ void draw() {
  rect(370,90,30,50);
  fill(255);
  stroke(255);
- ellipse(360,70, 50,30);
- ellipse(340,50, 60,35);
+ ellipse(cloud1x,cloud1y, 50,30);  //cloud 1
+ ellipse(cloud2x,cloud2y, 60,35);  //cloud 2
  
  //window
  fill(255);
@@ -105,7 +110,17 @@ void draw() {
   }
   if (y > horizon-20 || y < rady) {
     dy *=-1;
+    }
   }
+  
+  void cloudmove(){
+     
+  cloud1x = cloud1x - .125*dxc;
+  cloud2x = cloud2x - .125*dxc;
+  cloud1y = cloud1y - .125*dxc;
+  cloud2y = cloud2y - .125*dxc;
+  
+ 
   
   
   }
